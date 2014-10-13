@@ -4,18 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-
+    <title>Evan'S Mortgage Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./css/StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
-        Evan's Mortgage Calculator
-        
+       <h1>Evan's Mortgage Calculator</h1> 
+        <link rel="StyleSheet" type="text/css" href="./style.css" />
         <br /><br />
      
-        Loan Amount:* <asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
+        Loan Amount:* <asp:TextBox ID="tbLoanAmt" runat="server" style="margin-left: 37px" ></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="Please enter Amount"></asp:RequiredFieldValidator>
                   
         <br /><br />      
@@ -25,7 +25,7 @@
         
         <br /><br />
 
-        Loan Term (Yrs):*&nbsp; <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
+        Loan Term (Yrs):*&nbsp; <asp:TextBox ID="tbLoanTerm" runat="server" style="margin-left: 5px" ></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="Please enter length"></asp:RequiredFieldValidator>
         <br /><br />
 
@@ -43,11 +43,14 @@
          <% If Not IsPostBack Then%>
         
           <% Else%>
-     
+  
                   Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+        <br />
+        <br />
 
-
-                    <asp:GridView ID="loanGridView" runat="server" />     
+               <asp:GridView ID="loanGridView" runat="server" CssClass="cssgridview">     
+        <AlternatingRowStyle CssClass="alt" />
+        </asp:GridView>
 
            <%End If%>
        <br />

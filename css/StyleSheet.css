@@ -1,0 +1,22 @@
+﻿h1{font-size: 24px;}
+
+ body {background-color: #A4D043; 
+      font-size: 18px; 
+      color: #3B5595;
+    text-align: left;}
+ 
+
+ .cssgridview {align-items:center; width:auto; background:#7373D9; margin: 5px 0 10px 0; border:solid 1px #313186; 
+               border-collapse: collapse; font-family: "Century";
+}
+
+ .cssgridview td {padding:10px; border:solid 1px #090974; color:black;}
+
+ .cssgridview th {padding: 10px; color:#fff; 
+                  background:#4F4FD9 url(./style/grd_head.png) repeat-x top; 
+                  border-left:solid 1px #7373D9;}
+
+ .cssgridview .alt {background-color:white ;}
+
+
+}
