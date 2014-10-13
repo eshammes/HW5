@@ -11,33 +11,37 @@
     <form id="form1" runat="server">
     <div>
     
-    Mike's Mortgage Calculator
+        Evan's Mortgage Calculator
         
         <br /><br />
      
-        Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="Please Input a Loan Amount"></asp:RequiredFieldValidator>
+        Loan Amount:* <asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="Please enter Amount"></asp:RequiredFieldValidator>
                   
         <br /><br />      
         
-        Annual Interest %: <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="Please enter an Interest Rate"></asp:RequiredFieldValidator>
+        Annual Interest %: * <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="Please enter a Rate"></asp:RequiredFieldValidator>
         
         <br /><br />
 
-        Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="Please enter a Term"></asp:RequiredFieldValidator>
+        Loan Term (Yrs):*&nbsp; <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="Please enter length"></asp:RequiredFieldValidator>
         <br /><br />
 
-        <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
+        <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" Width="76px" />
         
-        <br /><br />
+        &nbsp;
                 
          <asp:Button ID="btn_clear" runat="server" Text="Clear" />
+        
+        <br />
+        
+                <p>Welcome to Evan's mortgage calculator. Please complete every field above </p>
+          <br />
+                
          <% If Not IsPostBack Then%>
         
-                <p>Welcome to my mortgage calculator. Please complete the fields above to have your monthly payment and loan repayment schedule 
-+            calculated for you</p>
           <% Else%>
      
                   Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
@@ -47,7 +51,7 @@
 
            <%End If%>
        <br />
-+        <br /> 
+        <br /> 
         </div>
     </form>
 </body>
