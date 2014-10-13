@@ -37,6 +37,9 @@
         
         <asp:GridView ID="loanGridView" runat="server" />
             
+        <br />
+        <asp:Button ID="btn_clear" runat="server" Text="Clear" />
+            
         </div>
     </form>
 </body>
